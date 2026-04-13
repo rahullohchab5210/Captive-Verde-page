@@ -36,8 +36,10 @@ export default function RootLayout({ children }) {
       className={`${poppins.variable} ${dmSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar/>
-        {children}
+        <Navbar />
+        <main> 
+          {children}
+        </main>
       <Footer/>
       </body>
     </html>

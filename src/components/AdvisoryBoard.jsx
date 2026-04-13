@@ -14,8 +14,8 @@ function AdvisoryBoard() {
                           className={"text-primary "}
                           spanClassName={"bg-primary"}
                       />
-                      <h2 className='lg:max-w-[543px] max-w-full pt-3 pb-4 font-dm font-normal lg:text-5xl sm:text-4xl text-3xl leading-120 tracking-normal text-secondary'>Leading with Experience, Culture & Vision</h2>
-                      <p className='max-w-[481px] pb-4 font-poppins font-normal sm:text-base text-sm leading-160 tracking-normal text-gray'>Captiva and MDC are guided by Indigenous elders, economic leaders, and global innovators in defense, infrastructure, and community development.</p>
+                      <h2 className='lg:max-w-135.75 max-w-full pt-3 pb-4 font-dm font-normal lg:text-5xl sm:text-4xl text-3xl leading-120 tracking-normal text-secondary'>Leading with Experience, Culture & Vision</h2>
+                      <p className='max-w-120.25 pb-4 font-poppins font-normal sm:text-base text-sm leading-160 tracking-normal text-gray'>Captiva and MDC are guided by Indigenous elders, economic leaders, and global innovators in defense, infrastructure, and community development.</p>
                       <div className='flex flex-col gap-4'>
                           {ADVISORY_BOARD_DATA.map((item,i) => ( 
                           <div key={i} className='flex flex-row sm:items-center gap-3'>
@@ -25,9 +25,8 @@ function AdvisoryBoard() {
                           ))}
                       </div>
                   </div>
-
                   <div className='flex items-center justify-center'>
-                      <img src="/assets/images/webp/advisory-board.webp" alt="pic" className='max-w-[550px] max-h-[581px] w-full h-full'/>
+                      <img src="/assets/images/webp/advisory-board.webp" alt="pic" className='max-w-137.5 max-h-145.25 w-full h-full'/>
                   </div>
               </div>
           </div>    

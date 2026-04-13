@@ -41,7 +41,7 @@ const Footer = () => {
                                     <div className="flex flex-col gap-2 xl:gap-3">
                                         {item.links.map((link, i) => (
                                             <Link
-                                                href={"/"}
+                                                href={"/about"}
                                                 key={i}
                                                 className="leading-160 text-sm sm:text-base relative group inline-block w-fit hover:text-primary transition-all duration-300"
                                             >
@@ -59,7 +59,7 @@ const Footer = () => {
                                         <div
                                             key={index}
                                             className="flex gap-2 sm:gap-3 items-center group  "
-                                        >
+                                           >
                                             <Icons
                                                 icon={item.icon}
                                                 className={"h-4 w-4 sm:h-5 sm:w-7"}

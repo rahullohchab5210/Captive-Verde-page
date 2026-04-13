@@ -4,7 +4,7 @@ const Title = ({ text, className, spanClassName }) => {
             <span
                 className={`h-px max-w-12.5 w-full rounded-[3px] ${spanClassName}`}
             ></span>
-            <p className={`font-medium leading-160`}>{text}</p>
+            <p className={`font-medium leading-160 tracking-normal`}>{text}</p>
             <span
                 className={`h-px max-w-12.5 w-full rounded-[3px] ${spanClassName}`}
             ></span>

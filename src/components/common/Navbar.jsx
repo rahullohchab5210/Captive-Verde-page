@@ -25,13 +25,13 @@ function Navbar() {
           <div className='flex items-center max-sm:justify-center lg:gap-65.25 max-lg:justify-between lg:justify-end '>
             <p className='text-center font-normal text-xs leading-160 tracking-normal text-off-white font-poppins max-sm:hidden'>Empowering Wellness & Sustainability Through Indigenous Partnerships</p>
             <div className="flex items-center  gap-3 ">
-              <a href='https://www.facebook.com/' target='_blank' className="w-6 h-6 rounded-full bg-white flex items-center justify-center cursor-pointer">
+              <a href='https://www.facebook.com/' aria-label="Visit our Facebook page" target='_blank' className="w-6 h-6 rounded-full bg-white flex items-center justify-center cursor-pointer">
                 <Icons icon={"FACEBOOK"} />
               </a>
-              <a href='https://www.instagram.com/' target='_blank' className="w-6 h-6 rounded-full bg-white flex items-center justify-center cursor-pointer">
+              <a href='https://www.instagram.com/' aria-label="Visit our Instagram page" target='_blank' className="w-6 h-6 rounded-full bg-white flex items-center justify-center cursor-pointer">
                 <Icons icon={"INSTAGRAM"} />
               </a>
-              <a href='https://x.com/?lang=en-in' target='_blank' className="w-6 h-6 rounded-full bg-white flex items-center justify-center cursor-pointer">
+              <a href='https://x.com/?lang=en-in' aria-label="Visit our Twitter page" target='_blank' className="w-6 h-6 rounded-full bg-white flex items-center justify-center cursor-pointer">
                 <Icons icon={"TWITTER"} />
               </a>
             </div>
@@ -45,19 +45,19 @@ function Navbar() {
             <Link onClick={() => setMenuOpen(false)} href="/about" className='max-[500px]:z-70 cursor-pointer'>
               <img src="/assets/images/webp/logo-image.webp" alt="logo" />
             </Link>
-            <div className={`flex lg:items-center max-lg:flex-col lg:flex-row lg:gap-41.5 z-50  max-[500px]:items-center max-lg:px-10 max-sm:px-5 max-lg:pt-40  max-lg:gap-4 max-lg:flex-col  max-[1024px]:fixed max-[1024px]:bg-white    max-[1024px]:h-screen max-[1024px]:w-1/2 max-[500px]:w-full max-[1024px]:top-0 max-[1024px]:transition-all max-[1024px]:duration-300 max-[1024px]:ease-linear ${menuOpen === "show" ? "max-[1024px]:right-0" : "max-[1024px]:-right-full"}`}> 
+            <div className={`flex lg:items-center max-lg:flex-col lg:flex-row lg:gap-41.5 z-50  max-[500px]:items-center max-lg:px-10 max-sm:px-5 max-lg:pt-40  max-lg:gap-4 max-[1024px]:fixed max-[1024px]:bg-white    max-[1024px]:h-screen max-[1024px]:w-1/2 max-[500px]:w-full max-[1024px]:top-0 max-[1024px]:transition-all max-[1024px]:duration-300 max-[1024px]:ease-linear ${menuOpen === "show" ? "max-[1024px]:right-0" : "max-[1024px]:-right-full"}`}>
               <div className={`flex gap-8  max-[500px]:items-center  max-lg:gap-4 max-lg:flex-col  `}>
-              {NAVLINKS_DATA.map((nav, i) => ( 
-                <Link onClick={() => setMenuOpen(false)} key={i} href={nav.path} className='font-poppins font-normal text-base leading-160 tracking-normal text-secondary hover:text-primary transition-all duration-300 group relative inline-block'>
-                  {nav.title}
-                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-primary   transition-all duration-300 group-hover:w-full rounded"></span>
-                </Link>
+                {NAVLINKS_DATA.map((nav, i) => (
+                  <Link onClick={() => setMenuOpen(false)} key={i} href={nav.path} className='font-poppins font-normal text-base leading-160 tracking-normal text-secondary hover:text-primary transition-all duration-300 group relative inline-block'>
+                    {nav.title}
+                    <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-primary   transition-all duration-300 group-hover:w-full rounded"></span>
+                  </Link>
                 ))}
-            </div>
-            <div>
-              <Button className={"py-3.25 px-7.75 bg-primary hover:bg-off-white text-off-white hover:text-primary border border-transparent hover:border-primary duration-300 ease-in"}
-                text={"Contact"}
-              />
+              </div>
+              <div>
+                <Button className={"py-3.25 px-7.75 bg-primary hover:bg-off-white text-off-white hover:text-primary border border-transparent hover:border-primary duration-300 ease-in"}
+                  text={"Contact"}
+                />
               </div>
             </div>
             <button onClick={() => setMenuOpen(menuOpen === "show" ? null : "show")} className="lg:hidden flex flex-col gap-1.5 w-10 h-10 justify-center items-center z-999 cursor-pointer">

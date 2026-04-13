@@ -8,7 +8,7 @@ function Indigenous() {
         <div className='md:pt-16.5 md:pb-17.5 pt-10 pb-10 bg-primary-8'>
             <div className='max-w-285 mx-auto max-[1350px]:px-3'>
                 <div className='flex lg:flex-row flex-col items-center lg:gap-15.75 gap-7'>
-                    <img src="/assets/images/png/indigenous-ownership.png" alt="image" className='max-w-[550px] max-h-[510px] w-full h-full' />
+                    <img src="/assets/images/webp/indigenous-ownership.webp" alt="image" className='max-w-137.5 max-h-127.5 w-full h-full' />
                     <div>
                         <Title
                             text={"Indigenous Ownership Model"}
@@ -22,7 +22,7 @@ function Indigenous() {
                         />
                     </div>
                 </div>
-                <div className='grid md:grid-cols-4 grid-cols-2 sm:gap-6 gap-4 w-full mt-[64px]'>
+                <div className='grid md:grid-cols-4 grid-cols-2 sm:gap-6 gap-4 w-full mt-16'>
                     {INDIGENOUS_CARD_DATA.map((card, i) => (
                         <div key={i} className='hover:shadow-[0_2px_20px_0_rgba(0,0,0,0.25)] rounded-xl w-full'>
                             <img src={card.image} alt="picture" className='max-md:w-full' />

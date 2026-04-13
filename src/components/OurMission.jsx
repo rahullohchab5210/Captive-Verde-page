@@ -4,7 +4,7 @@ import Title from './common/Title'
 
 function OurMission() {
     return (
-        <div className='md:py-[140px] py-20 '>
+        <div className='md:py-35 py-20 '>
             <div className='max-w-285 mx-auto max-[1350px]:px-3'>
                 <Title
                     text={"Our Mission & Vision"}
@@ -15,7 +15,7 @@ function OurMission() {
                 <div className='flex flex-row max-sm:flex-col items-center gap-6'>
                     {OUR_MISSION_DATA.map((card, i) => (
                         <div key={i} className='sm:p-6 p-4 bg-off-white border border-secondary-12 rounded-xl  w-full h-full'>
-                            <img src={card.image} alt="image" className='max-h-[236px] sm:max-w-[510px] h-full w-full' />
+                            <img src={card.image} alt="image" className='max-h-59 sm:max-w-127.5 h-full w-full' />
                             <h3 className='pt-6 pb-4 font-poppins font-semibold text-heading leading-100 tracking-normal text-primary'>{card.title}</h3>
                             <p className='font-poppins font-normal sm:text-base text-base leading-160 tracking-normal text-secondary'>{card.description}</p>
                         </div>
