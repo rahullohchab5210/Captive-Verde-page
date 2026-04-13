@@ -1,30 +1,13 @@
-import AdvisoryBoard from "@/components/AdvisoryBoard";
-import Footer from "@/components/common/Footer";
-import Navbar from "@/components/common/Navbar";
-import CompanyStatus from "@/components/CompanyStatus";
-import Hero from "@/components/Hero";
-import Indigenous from "@/components/Indigenous";
-import OurMission from "@/components/OurMission";
-import RegenerativeFuture from "@/components/RegenerativeFuture";
-import SetsUs from "@/components/SetsUs";
-
+"use client";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
-  return (
-    <>
-
-      <Navbar />
-      <Hero />
-      <OurMission />
-      <Indigenous />
-      <CompanyStatus />
-        <AdvisoryBoard />
-        <SetsUs/>
-      <RegenerativeFuture />
-       <Footer/>
-
-    </>
-  );
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/about");
+  }, []);
+  return null;
 }
 
 

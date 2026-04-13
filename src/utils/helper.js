@@ -131,11 +131,11 @@ export const FOOTER_ANCHOR_TAG_DATA = [
         text: "Vancouver, Canada",
     },
     {
-        svg: "PHONE",
+        icon: "PHONE",
         text: "+1 473824327",
     },
     {
-        svg: "MAIL",
+        icon: "MAIL",
         text: "info@captivaverde.com",
     },
 ];

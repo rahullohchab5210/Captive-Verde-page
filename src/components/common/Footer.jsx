@@ -43,31 +43,33 @@ const Footer = () => {
                                             <Link
                                                 href={"/"}
                                                 key={i}
-                                                className="leading-160 text-sm sm:text-base a"
+                                                className="leading-160 text-sm sm:text-base relative group inline-block w-fit hover:text-primary transition-all duration-300"
                                             >
+                                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-primary   transition-all duration-300 group-hover:w-full rounded"></span>
                                                 {link}
                                             </Link>
                                         ))}
                                     </div>
                                 </div>
                             ))}
-                            <div className="flex flex-col gap-4 font-poppins text-off-white col-span-2 md:col-span-1">
-                                <h4 className="font-semibold leading-100 text-base">Contact</h4>
+                            <div className="flex flex-col gap-4 font-poppins  col-span-2 md:col-span-1">
+                                <h4 className="font-semibold leading-100 text-off-white text-base">Contact</h4>
                                 <div className="flex flex-col gap-3">
                                     {FOOTER_ANCHOR_TAG_DATA.map((item, index) => (
                                         <div
                                             key={index}
-                                            className="flex gap-2 sm:gap-3 items-center "
+                                            className="flex gap-2 sm:gap-3 items-center group  "
                                         >
                                             <Icons
-                                                icon={item.svg}
+                                                icon={item.icon}
                                                 className={"h-4 w-4 sm:h-5 sm:w-7"}
                                             />
                                             <a
-                                                className="leading-160 text-off-white font-poppins xl:whitespace-nowrap min-w-0 wrap-break-word whitespace-pre-wrap text-sm sm:text-base a"
-                                                href={`${item.svg === "location" ? "" : item.svg === "contact" ? "tel:+1 473824327" : item.svg === "email" ? "mailto:info@captivaverde.com" : ""}`}
+                                                className="leading-160 group-hover:text-primary text-off-white font-poppins xl:whitespace-nowrap min-w-0 wrap-break-word whitespace-pre-wrap text-sm sm:text-base relative inline-block"
+                                                href={`${item.icon === "location" ? "" : item.icon === "contact" ? "tel:+1 473824327" : item.icon === "email" ? "mailto:info@captivaverde.com" : ""}`}
                                             >
                                                 {item.text}
+                                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-primary   transition-all duration-300 group-hover:w-full rounded"></span>
                                             </a>
                                         </div>
                                     ))}

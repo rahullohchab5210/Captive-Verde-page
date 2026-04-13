@@ -42,14 +42,15 @@ function Navbar() {
       <nav className='bg-white py-2.25'>
         <div className='max-w-285 mx-auto max-[1350px]:px-3'>
           <div className='flex items-center justify-between'>
-            <a href="#" className='max-[500px]:z-70'>
+            <Link onClick={() => setMenuOpen(false)} href="/about" className='max-[500px]:z-70 cursor-pointer'>
               <img src="/assets/images/webp/logo-image.webp" alt="logo" />
-            </a>
+            </Link>
             <div className={`flex lg:items-center max-lg:flex-col lg:flex-row lg:gap-41.5 z-50  max-[500px]:items-center max-lg:px-10 max-sm:px-5 max-lg:pt-40  max-lg:gap-4 max-lg:flex-col  max-[1024px]:fixed max-[1024px]:bg-white    max-[1024px]:h-screen max-[1024px]:w-1/2 max-[500px]:w-full max-[1024px]:top-0 max-[1024px]:transition-all max-[1024px]:duration-300 max-[1024px]:ease-linear ${menuOpen === "show" ? "max-[1024px]:right-0" : "max-[1024px]:-right-full"}`}> 
               <div className={`flex gap-8  max-[500px]:items-center  max-lg:gap-4 max-lg:flex-col  `}>
               {NAVLINKS_DATA.map((nav, i) => ( 
-                <Link key={i} href={nav.path} className='font-poppins font-normal text-base leading-160 tracking-normal text-secondary'>
+                <Link onClick={() => setMenuOpen(false)} key={i} href={nav.path} className='font-poppins font-normal text-base leading-160 tracking-normal text-secondary hover:text-primary transition-all duration-300 group relative inline-block'>
                   {nav.title}
+                  <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-primary   transition-all duration-300 group-hover:w-full rounded"></span>
                 </Link>
                 ))}
             </div>

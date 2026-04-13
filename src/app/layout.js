@@ -1,5 +1,7 @@
 import { Poppins, DM_Serif_Text } from 'next/font/google';
 import "./globals.css";
+import Navbar from '@/components/common/Navbar';
+import Footer from '@/components/common/Footer';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -33,7 +35,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${poppins.variable} ${dmSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar/>
+        {children}
+      <Footer/>
+      </body>
     </html>
   );
 }
