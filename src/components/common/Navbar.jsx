@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Icons from './Icons'
 import { NAVLINKS_DATA } from '@/utils/helper'
 import Link from 'next/link'
@@ -7,8 +7,19 @@ import Button from './Button'
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
   return (
-    <div className='sticky top-0 w-full'>
+    <div className={`sticky top-0 w-full ${isScrolled ? " shadow-lg" : ""}`}>
       <header className='bg-primary w-full py-2'>
         <div className='max-w-285 mx-auto max-[1350px]:px-3'>
           <div className='flex items-center max-sm:justify-center lg:gap-65.25 max-lg:justify-between lg:justify-end '>
