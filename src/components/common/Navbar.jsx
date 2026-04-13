@@ -60,7 +60,7 @@ function Navbar() {
                 />
               </div>
             </div>
-            <button onClick={() => setMenuOpen(menuOpen === "show" ? null : "show")} className="lg:hidden flex flex-col gap-1.5 w-10 h-10 justify-center items-center z-999 cursor-pointer">
+            <button onClick={() => setMenuOpen(menuOpen === "show" ? null : "show")} aria-label="Open menu" className="lg:hidden flex flex-col gap-1.5 w-10 h-10 justify-center items-center z-999 cursor-pointer">
               <span className={`block w-7 h-0.5 rounded-[30px] bg-primary transition-all duration-300 ${menuOpen === "show" ? "rotate-45 translate-y-2" : ""}`} />
               <span className={`block w-7 h-0.5 rounded-[30px] bg-primary transition-all duration-300 ${menuOpen === "show" ? "opacity-0" : ""}`} />
               <span className={`block w-7 h-0.5 rounded-[30px] bg-primary transition-all duration-300 ${menuOpen === "show" ? "-rotate-45 -translate-y-2" : ""}`} />

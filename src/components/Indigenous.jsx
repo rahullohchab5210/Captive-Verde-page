@@ -22,7 +22,7 @@ function Indigenous() {
                         />
                     </div>
                 </div>
-                <div className='grid md:grid-cols-4 grid-cols-2 sm:gap-6 gap-4 w-full mt-16'>
+                <div className='grid md:grid-cols-4 grid-cols-2 sm:gap-6 gap-4 w-full mt-[64px]'>
                     {INDIGENOUS_CARD_DATA.map((card, i) => (
                         <div key={i} className='hover:shadow-[0_2px_20px_0_rgba(0,0,0,0.25)] rounded-xl w-full'>
                             <img src={card.image} alt="picture" className='max-md:w-full' />
